@@ -1,0 +1,198 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Lab1b</title><meta name="generator" content="MATLAB 9.5"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2020-03-28"><meta name="DC.source" content="Lab1b.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#1">Preparation</a></li><li><a href="#2">a)</a></li><li><a href="#3">b)</a></li><li><a href="#4">c)</a></li><li><a href="#5">d)</a></li></ul></div><h2 id="1">Preparation</h2><pre class="codeinput">close <span class="string">all</span>;
+</pre><h2 id="2">a)</h2><pre class="codeinput">daneP = importfile(<span class="string">'daneP.csv'</span>, 4, 298);
+
+<span class="comment">% first way</span>
+plot(daneP{:,1});
+title(<span class="string">'R'</span>);
+<span class="comment">% second way</span>
+col2 = daneP{:, 2};
+col3 = daneP{:, 3};
+figure(2);
+plot(col2);
+title(<span class="string">'G'</span>);
+figure(3);
+plot(col3);
+title(<span class="string">'B'</span>);
+</pre><img vspace="5" hspace="5" src="Lab1b_01.png" alt=""> <img vspace="5" hspace="5" src="Lab1b_02.png" alt=""> <img vspace="5" hspace="5" src="Lab1b_03.png" alt=""> <h2 id="3">b)</h2><pre class="codeinput">periodicSignal = col2(11:255, :);
+figure(4);
+plot(periodicSignal);
+title(<span class="string">'Periodic signal'</span>);
+</pre><img vspace="5" hspace="5" src="Lab1b_04.png" alt=""> <h2 id="4">c)</h2><pre class="codeinput"> x = 1:245;
+ y = polyval(fit.coeff, x);
+
+ figure(5);
+ plot(y);
+ hold <span class="string">on</span>;
+ plot(periodicSignal);
+ hold <span class="string">off</span>;
+ legend(<span class="string">'trend'</span>, <span class="string">'sygna&#322; okresowy'</span>);
+
+ z = periodicSignal - transpose(y);
+ figure(6);
+ plot(z);
+ title(<span class="string">'Signal with the trend removed'</span>);
+</pre><img vspace="5" hspace="5" src="Lab1b_05.png" alt=""> <img vspace="5" hspace="5" src="Lab1b_06.png" alt=""> <h2 id="5">d)</h2><p>przekszta&#322;cenie transformaty Fouriera sygna&#322;u po odj&#281;ciu trendu</p><pre class="codeinput"> fftResids = fft(z);
+
+ <span class="comment">% przekszta&#322;cenie transformaty Fouriera na spos&oacute;b daj&#261;cy si&#281; wy&#347;wietli&#263; w</span>
+ <span class="comment">% postaci interpretowalej dla cz&#322;owieka</span>
+ L = length(fftResids);
+ P2 = abs(fftResids/L);
+ P1 = P2(1:(L/2)+1);
+ P1(2:end-1) = 2*P1(2:end-1);
+
+ <span class="comment">% cz&#281;stotliwo&#347;&#263; pr&oacute;bkowania wzi&#281;ta z pliku dane.csv</span>
+ Fs = 900;
+ f = Fs*(0:(L/2))/L;
+ <span class="comment">% wykres</span>
+ figure(7);
+ plot(f, P1);
+ hold <span class="string">on</span>
+ plot(72.83, 0.543, <span class="string">"r*"</span>);
+ text(72.83, 0.543, <span class="string">"Fc ~= 72 Hz"</span>);
+ title(<span class="string">'FFT Sygnalu'</span>);
+ xlabel(<span class="string">'f (Hz)'</span>);
+ ylabel(<span class="string">'|Y(f)|'</span>);
+</pre><pre class="codeoutput">Warning: Integer operands are required for colon operator when used as index. 
+</pre><img vspace="5" hspace="5" src="Lab1b_07.png" alt=""> <p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2018b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Preparation 
+close all;
+
+%% a)
+daneP = importfile('daneP.csv', 4, 298);
+
+% first way
+plot(daneP{:,1});
+title('R');
+% second way
+col2 = daneP{:, 2};
+col3 = daneP{:, 3};
+figure(2);
+plot(col2);
+title('G');
+figure(3);
+plot(col3);
+title('B');
+
+
+%% b)
+
+periodicSignal = col2(11:255, :);
+figure(4);
+plot(periodicSignal);
+title('Periodic signal');
+
+%% c)
+ x = 1:245;
+ y = polyval(fit.coeff, x);
+ 
+ figure(5);
+ plot(y);
+ hold on;
+ plot(periodicSignal);
+ hold off;
+ legend('trend', 'sygnał okresowy');
+ 
+ z = periodicSignal - transpose(y);
+ figure(6);
+ plot(z);
+ title('Signal with the trend removed');
+ 
+ %% d)
+ % przekształcenie transformaty Fouriera sygnału po odjęciu trendu
+ fftResids = fft(z);
+ 
+ % przekształcenie transformaty Fouriera na sposób dający się wyświetlić w
+ % postaci interpretowalej dla człowieka
+ L = length(fftResids);
+ P2 = abs(fftResids/L);
+ P1 = P2(1:(L/2)+1);
+ P1(2:end-1) = 2*P1(2:end-1);
+ 
+ % częstotliwość próbkowania wzięta z pliku dane.csv
+ Fs = 900;
+ f = Fs*(0:(L/2))/L;
+ % wykres
+ figure(7);
+ plot(f, P1);
+ hold on 
+ plot(72.83, 0.543, "r*");
+ text(72.83, 0.543, "Fc ~= 72 Hz");
+ title('FFT Sygnalu');
+ xlabel('f (Hz)');
+ ylabel('|Y(f)|');
+ 
+ 
+
+
+
+##### SOURCE END #####
+--></body></html>
